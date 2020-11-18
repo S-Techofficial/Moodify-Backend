@@ -4,15 +4,16 @@ from django.contrib.auth.decorators import login_required
 from django.contrib.auth import get_user_model
 from django.views.decorators.csrf import csrf_exempt
 import braintree
+import os
 
 # Create your views here.
 
 gateway = braintree.BraintreeGateway(
     braintree.Configuration(
         braintree.Environment.Sandbox,
-        merchant_id="w283jwvc4jpwyt5h",
-        public_key="2q5w7n3c6qr9h2n2",
-        private_key="9468d5fc730895bcf6563dddaf9a447c"
+        merchant_id=os.getenv('PAYMENT_MERCHANT_ID'),
+        public_key=os.getenv('PAYMENT_PUBLIC_KEY'),
+        private_key=os.getenv('PAYMENT_PRIVATE_KEY')
     )
 )
 

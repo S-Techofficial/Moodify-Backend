@@ -26,7 +26,7 @@ def signin(request):
     password = request.POST['password']
 
 #   Validation Part
-    if not re.match("^[\w\.\+\-]+\@[\w]+\.[a-z]{2,3}$", username):
+    if not re.match('^[a-z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w{2,3}$', username):
         return JsonResponse({'error': 'Enter a valid email'})
 
     UserModel = get_user_model()

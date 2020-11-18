@@ -10,9 +10,9 @@ class Playlist(models.Model):
     image = models.ImageField(upload_to="images/", blank=True, null=True)
     category = models.ForeignKey(
         Category, on_delete=models.SET_NULL, blank=True, null=True)
-    created_by = models.ForeignKey(CustomUser,on_delete=models.CASCADE,blank=True,null=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
+    user = models.ForeignKey(CustomUser, on_delete=models.CASCADE, blank=True, null=True)
 
     def __str__(self):
         return self.name
