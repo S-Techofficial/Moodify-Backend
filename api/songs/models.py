@@ -35,7 +35,7 @@ class Song(models.Model):
     image = models.ImageField(upload_to="images/", blank=True, null=True)
     playlist = models.ManyToManyField(Playlist)
     audio = models.FileField(upload_to="audio/", blank=True, validators=[FileExtensionValidator(
-        ['.mp3', '.wav', '.ogg'])], help_text=("Allowed_type - .mp3, .wav, .ogg"))
+        ['mp3', 'wav', 'ogg'])], help_text=("Allowed_type - .mp3, .wav, .ogg"))
     # audio = AudioField(upload_to="audio/", blank="True", ext_whitelist=(".mp3",".wav",".ogg"), help_text=("Allowed_type - .mp3, .wav, .ogg"))
     mood = models.CharField(
         max_length=50, choices=MOOD_CHOICES, default="RANDOM")

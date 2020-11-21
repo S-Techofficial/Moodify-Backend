@@ -22,8 +22,8 @@ def signin(request):
     if not request.method == 'POST':
         return JsonResponse({'error': 'Send a POST request with valid parameters only!'})
 
-    username = request.POST['email']
-    password = request.POST['password']
+    username = request.POST.get('email')
+    password = request.POST.get('password')
 
 #   Validation Part
     if not re.match('^[a-z0-9]+[\._]?[a-z0-9]+[@]\w+[.]\w{2,3}$', username):
