@@ -9,6 +9,7 @@ Use the package manager [pip](https://pip.pypa.io/en/stable/) to install this ba
 ```bash
 pip install -r requirements.txt 
 ```
+Get Requirements file [here](https://github.com/S-Techofficial/Moodify-Backend/blob/master/requirements.txt)
 
 ## Contributing
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
