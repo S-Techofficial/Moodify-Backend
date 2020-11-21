@@ -7,7 +7,7 @@ Here you can find [Frontend](https://github.com/S-Techofficial/Moodify-Frontend)
 Use the package manager [pip](https://pip.pypa.io/en/stable/) to install this backend packages.
 
 ```bash
-pip install
+pip install -r requirements.txt 
 ```
 
 ## Contributing
